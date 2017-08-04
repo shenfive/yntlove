@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WebKit
 
 
 
@@ -16,7 +17,7 @@ class FifthViewController: UIViewController {
     var netWorkStatusTimer = Timer()
     var testCount = 0
     let mainThread = Thread.main
-    let webView = UIWebView()
+    let webView = WKWebView()
     let theServer = "https://f5f.yntlove.com/"
     
    
@@ -28,9 +29,9 @@ class FifthViewController: UIViewController {
         // Do any additional setup after loading the view.
         pictures.isHidden = true
         let rect = CGRect(x: self.view.frame.origin.x,
-                          y: self.view.frame.origin.y + 73,
+                          y: self.view.frame.origin.y + 20,
                           width: self.view.frame.width,
-                          height: self.view.frame.height - 73)
+                          height: self.view.frame.height + 120)
         
         
         webView.frame = rect
@@ -51,7 +52,7 @@ class FifthViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super .viewDidAppear(animated)
-        netWorkStatusTimer = Timer.scheduledTimer(timeInterval: 4 , target: self, selector: #selector(self.netWork), userInfo: nil, repeats: true)
+        netWorkStatusTimer = Timer.scheduledTimer(timeInterval: 6 , target: self, selector: #selector(self.netWork), userInfo: nil, repeats: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -66,7 +67,7 @@ class FifthViewController: UIViewController {
             print("網路通的")
             let urlString = self.theServer + "mobile/in"
             let url = URL(string: urlString)
-            let urlRequest = URLRequest(url: url!, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 3.9)
+            let urlRequest = URLRequest(url: url!, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 5.9)
             let session = URLSession.shared
             session.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
                 
@@ -93,7 +94,7 @@ class FifthViewController: UIViewController {
     @IBAction func openPictureWeb(_ sender: UIButton) {
         webView.isHidden = false
         let urlRequest = URLRequest(url: URL(string:theServer + "MUser/login")!)
-        webView.loadRequest(urlRequest)
+        webView.load(urlRequest)
     }
     
     

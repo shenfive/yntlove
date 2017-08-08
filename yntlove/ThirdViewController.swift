@@ -14,6 +14,7 @@ class ThirdViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+         self.tabBarItem.selectedImage = UIImage(named: "icon_car_h")
     }
 
     override func didReceiveMemoryWarning() {

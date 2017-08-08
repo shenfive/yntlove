@@ -25,6 +25,7 @@ class FifthViewController: UIViewController {
     @IBOutlet weak var pictures: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+         self.tabBarItem.selectedImage = UIImage(named: "icon_photo_h")
         netWork()
         // Do any additional setup after loading the view.
         pictures.isHidden = true
@@ -45,10 +46,7 @@ class FifthViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func test(_ sender: Any) {
-        testCount += 1
-        print(testCount)
-    }
+
     
     override func viewDidAppear(_ animated: Bool) {
         super .viewDidAppear(animated)
@@ -60,6 +58,7 @@ class FifthViewController: UIViewController {
         netWorkStatusTimer.invalidate()
     }
     
+    // 測目標網址是否存在
     func netWork(){
         print(self.pictures.isHidden)
         let reachablility = Reachability(hostName: "www.apple.com")

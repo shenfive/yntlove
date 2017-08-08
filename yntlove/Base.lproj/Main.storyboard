@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -33,14 +34,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <rect key="frame" x="110" y="397" width="195" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZk-MU-nr1">
-                                <rect key="frame" x="180" y="97" width="95" height="30"/>
+                                <rect key="frame" x="138" y="422" width="95" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="電話"/>
                                 <connections>
@@ -48,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwN-8t-aOf">
-                                <rect key="frame" x="180" y="164" width="95" height="30"/>
+                                <rect key="frame" x="138" y="489" width="95" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="連絡人"/>
                                 <connections>
@@ -56,23 +51,30 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8V9-W6-Bst">
-                                <rect key="frame" x="180" y="234" width="95" height="30"/>
+                                <rect key="frame" x="138" y="559" width="95" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="導航"/>
                                 <connections>
                                     <action selector="goMap:" destination="9pv-A4-QxB" eventType="touchUpInside" id="c5V-2u-ewK"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="pOq-rg-wVk">
+                                <rect key="frame" x="172" y="20" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="3pz-f3-XY5"/>
+                                    <constraint firstAttribute="height" constant="70" id="SEj-KR-bcN"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
+                            <constraint firstItem="pOq-rg-wVk" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="GIN-vG-P0T"/>
+                            <constraint firstItem="pOq-rg-wVk" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" constant="20" id="ejl-8y-kX6"/>
                             <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="理念" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="理念" image="icon_idea_n" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -98,10 +100,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="gr6-7F-Acp">
+                                <rect key="frame" x="172" y="20" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="hY5-RA-73w"/>
+                                    <constraint firstAttribute="width" constant="70" id="vtu-fr-U5H"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gr6-7F-Acp" firstAttribute="centerX" secondItem="dzH-wm-RCE" secondAttribute="centerX" id="1cZ-jM-cwK"/>
+                            <constraint firstItem="gr6-7F-Acp" firstAttribute="top" secondItem="dzH-wm-RCE" secondAttribute="topMargin" constant="20" id="aaX-IJ-FLz"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="交通" image="first" id="xeb-zU-LW7"/>
+                    <tabBarItem key="tabBarItem" title="交通" image="icon_car_n" id="xeb-zU-LW7"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e2n-SD-zjW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -127,22 +140,26 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="99" y="397" width="215" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ga0-rJ-TRA">
+                                <rect key="frame" x="172" y="20" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="0db-ch-UVv"/>
+                                    <constraint firstAttribute="width" constant="70" id="ZA0-b8-HBJ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
+                            <constraint firstItem="ga0-rJ-TRA" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="topMargin" constant="20" id="Vew-do-4pm"/>
+                            <constraint firstItem="ga0-rJ-TRA" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="XGF-nG-MPf"/>
                             <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="聯絡" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="聯絡" image="icon_phone_n" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="tabBarItem" destination="cPa-gy-q4n" id="3xq-00-9P6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,6 +174,8 @@
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.6898341178894043" green="0.69417190551757812" blue="0.69407618045806885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
@@ -190,24 +209,28 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5z-Va-Or5">
-                                <rect key="frame" x="100" y="385" width="215" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="bDT-S7-JZf">
+                                <rect key="frame" x="172" y="20" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="rQB-NR-ZGV"/>
+                                    <constraint firstAttribute="width" constant="70" id="vwu-4E-pNA"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bDT-S7-JZf" firstAttribute="centerX" secondItem="PZD-e9-Dzx" secondAttribute="centerX" id="CIW-GG-csh"/>
+                            <constraint firstItem="bDT-S7-JZf" firstAttribute="top" secondItem="PZD-e9-Dzx" secondAttribute="topMargin" constant="20" id="M5j-mN-ooZ"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="環境" image="second" id="Sv6-VU-e0l"/>
+                    <tabBarItem key="tabBarItem" title="環境" image="icon_tree_n" id="Sv6-VU-e0l"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OKG-cc-gP7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="718.84057971014499" y="895.92391304347836"/>
         </scene>
-        <!--產品-->
+        <!--產品箱簿-->
         <scene sceneID="kSR-q8-e7p">
             <objects>
                 <viewController id="9RI-h7-NLp" customClass="FifthViewController" customModule="yntlove" customModuleProvider="target" sceneMemberID="viewController">
@@ -232,14 +255,6 @@
                                     <action selector="openPictureWeb:" destination="9RI-h7-NLp" eventType="touchUpInside" id="lLX-xY-Lxg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHT-8M-8Rl">
-                                <rect key="frame" x="20" y="20" width="112" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Test"/>
-                                <connections>
-                                    <action selector="test:" destination="9RI-h7-NLp" eventType="touchUpInside" id="bx4-1h-mCy"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Fifth View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="hLi-Tg-mZQ">
                                 <rect key="frame" x="128" y="347" width="158" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -248,14 +263,23 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="VOe-YF-cPX">
+                                <rect key="frame" x="172" y="20" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="NMr-Cy-RVk"/>
+                                    <constraint firstAttribute="width" constant="70" id="zDd-Hq-9M9"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eBc-qY-wuv" firstAttribute="centerX" secondItem="Muv-FV-MYe" secondAttribute="centerX" id="2qj-Ob-UAN"/>
+                            <constraint firstItem="VOe-YF-cPX" firstAttribute="top" secondItem="Muv-FV-MYe" secondAttribute="topMargin" constant="20" id="5XA-ig-tc0"/>
                             <constraint firstItem="UIq-iX-TIG" firstAttribute="top" secondItem="eBc-qY-wuv" secondAttribute="bottom" constant="27" id="Ghr-wi-usD"/>
+                            <constraint firstItem="VOe-YF-cPX" firstAttribute="centerX" secondItem="Muv-FV-MYe" secondAttribute="centerX" id="j9q-i1-Nwl"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="產品" image="first" id="Vsa-gx-YOr"/>
+                    <tabBarItem key="tabBarItem" title="產品箱簿" image="icon_photo_n" id="Vsa-gx-YOr"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="pictures" destination="eBc-qY-wuv" id="6lI-UG-3Bx"/>
@@ -267,7 +291,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
+        <image name="icon_car_n" width="30" height="30"/>
+        <image name="icon_idea_n" width="30" height="30"/>
+        <image name="icon_phone_n" width="30" height="30"/>
+        <image name="icon_photo_n" width="30" height="30"/>
+        <image name="icon_tree_n" width="30" height="30"/>
+        <image name="logo" width="70" height="70"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>

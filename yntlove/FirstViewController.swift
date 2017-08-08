@@ -18,6 +18,7 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+                self.tabBarItem.selectedImage = UIImage(named: "icon_idea_h")
     }
 
     override func didReceiveMemoryWarning() {

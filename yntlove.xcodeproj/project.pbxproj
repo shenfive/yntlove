@@ -17,6 +17,7 @@
 		BA6360641F3378E500F7FE61 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6360631F3378E500F7FE61 /* ThirdViewController.swift */; };
 		BA6360661F33791400F7FE61 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6360651F33791400F7FE61 /* FourthViewController.swift */; };
 		BA6360681F33792300F7FE61 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6360671F33792300F7FE61 /* FifthViewController.swift */; };
+		BA8CD76A1F39AC7200CEE031 /* YNTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8CD7691F39AC7200CEE031 /* YNTabBarItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		BA6360631F3378E500F7FE61 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		BA6360651F33791400F7FE61 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		BA6360671F33792300F7FE61 /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
+		BA8CD7691F39AC7200CEE031 /* YNTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNTabBarItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				BA6360631F3378E500F7FE61 /* ThirdViewController.swift */,
 				BA6360651F33791400F7FE61 /* FourthViewController.swift */,
 				BA6360671F33792300F7FE61 /* FifthViewController.swift */,
+				BA8CD7691F39AC7200CEE031 /* YNTabBarItem.swift */,
 			);
 			path = yntlove;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				BA6360621F3376D900F7FE61 /* Reachability.m in Sources */,
 				BA1428701F33591400BBE6F9 /* FirstViewController.swift in Sources */,
 				BA6360681F33792300F7FE61 /* FifthViewController.swift in Sources */,
+				BA8CD76A1F39AC7200CEE031 /* YNTabBarItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

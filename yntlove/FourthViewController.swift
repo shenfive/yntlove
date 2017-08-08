@@ -14,6 +14,7 @@ class FourthViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.tabBarItem.selectedImage = UIImage(named: "icon_tree_h")
     }
 
     override func didReceiveMemoryWarning() {

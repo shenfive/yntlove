@@ -13,6 +13,8 @@ import WebKit
 
 class FifthViewController: UIViewController {
 
+  
+    @IBOutlet weak var divLine: UIView!
     
     var netWorkStatusTimer = Timer()
     var testCount = 0
@@ -26,6 +28,9 @@ class FifthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
          self.tabBarItem.selectedImage = UIImage(named: "icon_photo_h")
+        self.tabBarItem.selectedImage = UIImage(named: "icon_tree_h")
+        let backLine = UIImage(named: "line_shadow")
+        divLine.backgroundColor = UIColor(patternImage: backLine!)
         netWork()
         // Do any additional setup after loading the view.
         pictures.isHidden = true
@@ -60,6 +65,7 @@ class FifthViewController: UIViewController {
     
     // 測目標網址是否存在
     func netWork(){
+//        return
         print(self.pictures.isHidden)
         let reachablility = Reachability(hostName: "www.apple.com")
         if reachablility?.currentReachabilityStatus().rawValue != 0 {

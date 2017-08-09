@@ -10,10 +10,17 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var contentView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.tabBarItem.selectedImage = UIImage(named: "icon_phone_h")
+        
+        let content = CominiView(frame: CGRect(x: 0, y: 0, width: 248, height: 386))
+        contentView.contentSize = content.bounds.size
+        contentView.addSubview(content)
+        
+        
     }
     
 

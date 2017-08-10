@@ -9,9 +9,11 @@
 import UIKit
 import CoreLocation
 import MapKit
+import Contacts
 
 class Area2Traffic: UIView {
     let telWeb = UIWebView()
+    var hostVC:UIViewController? = nil
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -83,4 +85,80 @@ class Area2Traffic: UIView {
         mapItem.openInMaps(launchOptions: options)
         
     }
+    
+    @IBAction func addAddress3(_ sender: Any) {
+        addContact3()
+    }
+    
+    func addContact3(){
+        // 查詢是否有加入過
+        let defult = UserDefaults.standard
+        if defult.bool(forKey: "added3") == true {
+            print("added")
+            let alert = UIAlertController(title: "說明", message: "您曾經有加入【福田妙國生命記念館】為連絡人了", preferredStyle: .alert)
+            let okButton = UIAlertAction(title: "確認", style: .default, handler: nil)
+            alert.addAction(okButton)
+            
+            hostVC?.present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        //创建通讯录对象
+        let store = CNContactStore()
+        
+        //创建CNMutableContact类型的实例
+        let contactToAdd = CNMutableContact()
+        
+        //设置姓名
+        contactToAdd.familyName = ""
+        contactToAdd.givenName = "福田妙國生命記念館"
+        
+        
+        //设置电话
+        let phoneNumber = CNPhoneNumber(stringValue: "02-2504-7000")
+        let workValue = CNLabeledValue(label: CNLabelWork,
+                                       value: phoneNumber)
+        
+        let phoneNumber2 = CNPhoneNumber(stringValue: "02-2498-6200")
+        let workValue2 = CNLabeledValue(label: CNLabelWork,
+                                        value: phoneNumber2)
+        
+        let phoneNumber3 = CNPhoneNumber(stringValue: "02-2498-0666")
+        let workValue3 = CNLabeledValue(label: "接駁車專線",
+                                        value: phoneNumber3)
+        
+        
+        contactToAdd.phoneNumbers = [workValue,workValue2,workValue3]
+        
+        
+        //地址
+        let address =  CNMutablePostalAddress()
+        address.city = "新北市"
+        address.street = "萬里區磺潭里員潭號 22-3號 "
+        
+        contactToAdd.postalAddresses = [CNLabeledValue<CNPostalAddress>(label: CNLabelWork, value: address)]
+        
+        //添加联系人请求
+        let saveRequest = CNSaveRequest()
+        saveRequest.add(contactToAdd, toContainerWithIdentifier: nil)
+        
+        do {
+            //写入联系人
+            try store.execute(saveRequest)
+            print("保存成功!")
+            defult.set(true, forKey: "added3")
+            defult.synchronize()
+            let alert = UIAlertController(title: "說明", message: "成功加入【福田妙國生命記念館】為連絡人", preferredStyle: .alert)
+            let okButton = UIAlertAction(title: "確認", style: .default, handler: nil)
+            alert.addAction(okButton)
+            hostVC?.present(alert, animated: true, completion: nil)
+        } catch {
+            print(error)
+        }
+    }
+    
+    
+    
+    
+    
 }

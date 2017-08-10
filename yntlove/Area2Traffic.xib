@@ -93,6 +93,9 @@
                     <state key="normal" image="icon_add">
                         <color key="titleColor" red="0.66666666669999997" green="0.64705882349999999" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="addAddress3:" destination="-1" eventType="touchUpInside" id="gJw-CY-MEu"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6g-9Z-5sk">
                     <rect key="frame" x="169" y="728" width="24" height="24"/>
@@ -100,6 +103,9 @@
                     <state key="normal" image="icon_add">
                         <color key="titleColor" red="0.66666666669999997" green="0.64705882349999999" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="addAddress3:" destination="-1" eventType="touchUpInside" id="b7T-j3-xkj"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQs-X0-oGR">
                     <rect key="frame" x="88" y="699" width="24" height="24"/>
@@ -139,13 +145,6 @@
                     <rect key="frame" x="55" y="823" width="106" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="02-2516-7700">
-                        <color key="titleColor" red="0.66666666669999997" green="0.64705882349999999" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nT1-Wk-jnO">
-                    <rect key="frame" x="169" y="758" width="24" height="24"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="icon_add">
                         <color key="titleColor" red="0.66666666669999997" green="0.64705882349999999" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>

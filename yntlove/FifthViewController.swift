@@ -27,7 +27,7 @@ class FifthViewController: UIViewController {
     @IBOutlet weak var pictures: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-         self.tabBarItem.selectedImage = UIImage(named: "icon_photo_h")
+        self.tabBarItem.selectedImage = UIImage(named: "icon_photo_h")
         self.tabBarItem.selectedImage = UIImage(named: "icon_tree_h")
         let backLine = UIImage(named: "line_shadow")
         divLine.backgroundColor = UIColor(patternImage: backLine!)
@@ -38,8 +38,6 @@ class FifthViewController: UIViewController {
                           y: self.view.frame.origin.y + 20,
                           width: self.view.frame.width,
                           height: self.view.frame.height + 120)
-        
-        
         webView.frame = rect
         webView.isHidden = true
         self.view.addSubview(webView)

@@ -30,6 +30,8 @@ class ThirdViewController: UIViewController {
         rightTopTabButton.setTitleColor(unSelectedColor, for: .normal)
   
         contentView.contentSize = CGSize(width: 249, height: 660)
+        content1.hostVC = self
+        content2.hostVC = self
         contentView.addSubview(content1)
         contentView.addSubview(content2)
         content2.isHidden = true

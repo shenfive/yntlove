@@ -88,6 +88,9 @@
                     <state key="normal" image="icon_add">
                         <color key="titleColor" red="0.66666666669999997" green="0.64705882349999999" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="addAddress2:" destination="-1" eventType="touchUpInside" id="KOD-e3-iec"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Gs-JJ-lGR">
                     <rect key="frame" x="54" y="454" width="100" height="30"/>

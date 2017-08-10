@@ -17,7 +17,8 @@ class SecondViewController: UIViewController {
         self.tabBarItem.selectedImage = UIImage(named: "icon_phone_h")
         
         let content = CominiView(frame: CGRect(x: 0, y: 0, width: 248, height: 386))
-        contentView.contentSize = content.bounds.size
+        content.hostVC = self
+        contentView.contentSize = content.bounds.size        
         contentView.addSubview(content)
         
         

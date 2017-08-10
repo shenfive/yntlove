@@ -59,14 +59,24 @@ class CominiView: UIView {
         
         let application = UIApplication.shared
         let myUrl = URL(string: "https://www.facebook.com/%E6%B0%B8%E5%BF%B5%E5%BA%AD%E7%94%9F%E5%91%BD%E5%85%B8%E8%97%8F%E9%A4%A8-505671212949872/?fref=ts")
-        application.open(myUrl!, options: [:], completionHandler: nil)
+        if #available(iOS 10.0, *) {
+            application.open(myUrl!, options: [:], completionHandler: nil)
+        } else {
+            application.openURL(myUrl!)
+            // Fallback on earlier versions
+        }
         
     }
     
     @IBAction func openOWinSafari(_ sender: Any) {
         let application = UIApplication.shared
         let myUrl = URL(string: "http://www.unameteam.com.tw/")
-        application.open(myUrl!, options: [:], completionHandler: nil)
+        if #available(iOS 10.0, *) {
+            application.open(myUrl!, options: [:], completionHandler: nil)
+        } else {
+            application.openURL(myUrl!)
+            // Fallback on earlier versions
+        }
     }
     func callN1(){
         let url = NSURL(string: "tel://02-2504-7000")

@@ -24,6 +24,7 @@
 		BA9633E61F3B6AB800A0FC8C /* Area1Traffic.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9633E51F3B6AB800A0FC8C /* Area1Traffic.xib */; };
 		BA9633E81F3B6B4A00A0FC8C /* Area2Traffic.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9633E71F3B6B4A00A0FC8C /* Area2Traffic.xib */; };
 		BA9633EA1F3B6B6900A0FC8C /* Area2Traffic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9633E91F3B6B6900A0FC8C /* Area2Traffic.swift */; };
+		BAD622511F3C670A006C1A2D /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD622501F3C670A006C1A2D /* PictureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		BA9633E51F3B6AB800A0FC8C /* Area1Traffic.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Area1Traffic.xib; sourceTree = "<group>"; };
 		BA9633E71F3B6B4A00A0FC8C /* Area2Traffic.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Area2Traffic.xib; sourceTree = "<group>"; };
 		BA9633E91F3B6B6900A0FC8C /* Area2Traffic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Area2Traffic.swift; sourceTree = "<group>"; };
+		BAD622501F3C670A006C1A2D /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				BA9633E51F3B6AB800A0FC8C /* Area1Traffic.xib */,
 				BA9633E71F3B6B4A00A0FC8C /* Area2Traffic.xib */,
 				BA9633E91F3B6B6900A0FC8C /* Area2Traffic.swift */,
+				BAD622501F3C670A006C1A2D /* PictureViewController.swift */,
 			);
 			path = yntlove;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA9633E41F3B6AA500A0FC8C /* Area1Traffic.swift in Sources */,
+				BAD622511F3C670A006C1A2D /* PictureViewController.swift in Sources */,
 				BA6360661F33791400F7FE61 /* FourthViewController.swift in Sources */,
 				BA1428721F33591400BBE6F9 /* SecondViewController.swift in Sources */,
 				BA14286E1F33591400BBE6F9 /* AppDelegate.swift in Sources */,

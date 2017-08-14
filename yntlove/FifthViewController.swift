@@ -21,7 +21,7 @@ class FifthViewController: UIViewController {
     let mainThread = Thread.main
     let webView = WKWebView()
     let button = UIButton()
-    let theServer = "https://f5f.yntlove.com/"
+    let theServer = "https://5f.yntlove.com/"
     
     var picturesA = [UIImage]()
     var picturesB = [UIImage]()
@@ -138,7 +138,7 @@ class FifthViewController: UIViewController {
     }
     @IBAction func p01(_ sender: Any) {
         targetPictures = picturesA
-        picturesSubTitle = "永念亭"
+        picturesSubTitle = "永念庭"
         performSegue(withIdentifier: "goPic", sender: self)
     }
     

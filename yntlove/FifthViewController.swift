@@ -34,7 +34,6 @@ class FifthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBarItem.selectedImage = UIImage(named: "icon_photo_h")
-        self.tabBarItem.selectedImage = UIImage(named: "icon_tree_h")
         let backLine = UIImage(named: "line_shadow")
         divLine.backgroundColor = UIColor(patternImage: backLine!)
         netWork()
@@ -50,7 +49,7 @@ class FifthViewController: UIViewController {
         let rect = CGRect(x: self.view.frame.origin.x,
                           y: self.view.frame.origin.y + 20,
                           width: self.view.frame.width,
-                          height: self.view.frame.height + 120)
+                          height: self.view.frame.height - 33)
         webView.frame = rect
         webView.isHidden = true
         button.frame = CGRect(x: 0, y: 20, width: 66, height: 33)
@@ -79,7 +78,7 @@ class FifthViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super .viewDidAppear(animated)
-        netWorkStatusTimer = Timer.scheduledTimer(timeInterval: 6 , target: self, selector: #selector(self.netWork), userInfo: nil, repeats: true)
+        netWorkStatusTimer = Timer.scheduledTimer(timeInterval: 8 , target: self, selector: #selector(self.netWork), userInfo: nil, repeats: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -96,7 +95,7 @@ class FifthViewController: UIViewController {
             print("網路通的")
             let urlString = self.theServer + "mobile/in"
             let url = URL(string: urlString)
-            let urlRequest = URLRequest(url: url!, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 5.9)
+            let urlRequest = URLRequest(url: url!, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 7.9)
             let session = URLSession.shared
             session.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
                 

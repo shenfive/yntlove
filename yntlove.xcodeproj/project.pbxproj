@@ -17,7 +17,6 @@
 		BA6360641F3378E500F7FE61 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6360631F3378E500F7FE61 /* ThirdViewController.swift */; };
 		BA6360661F33791400F7FE61 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6360651F33791400F7FE61 /* FourthViewController.swift */; };
 		BA6360681F33792300F7FE61 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6360671F33792300F7FE61 /* FifthViewController.swift */; };
-		BA8CD76A1F39AC7200CEE031 /* YNTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8CD7691F39AC7200CEE031 /* YNTabBarItem.swift */; };
 		BA9633DE1F3B3FFB00A0FC8C /* CominiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9633DD1F3B3FFB00A0FC8C /* CominiView.swift */; };
 		BA9633E21F3B404900A0FC8C /* CominiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9633E11F3B404900A0FC8C /* CominiView.xib */; };
 		BA9633E41F3B6AA500A0FC8C /* Area1Traffic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9633E31F3B6AA500A0FC8C /* Area1Traffic.swift */; };
@@ -43,7 +42,6 @@
 		BA6360631F3378E500F7FE61 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		BA6360651F33791400F7FE61 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		BA6360671F33792300F7FE61 /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
-		BA8CD7691F39AC7200CEE031 /* YNTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNTabBarItem.swift; sourceTree = "<group>"; };
 		BA9633DD1F3B3FFB00A0FC8C /* CominiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CominiView.swift; sourceTree = "<group>"; };
 		BA9633E11F3B404900A0FC8C /* CominiView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CominiView.xib; sourceTree = "<group>"; };
 		BA9633E31F3B6AA500A0FC8C /* Area1Traffic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Area1Traffic.swift; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 				BA6360631F3378E500F7FE61 /* ThirdViewController.swift */,
 				BA6360651F33791400F7FE61 /* FourthViewController.swift */,
 				BA6360671F33792300F7FE61 /* FifthViewController.swift */,
-				BA8CD7691F39AC7200CEE031 /* YNTabBarItem.swift */,
 				BA9633DD1F3B3FFB00A0FC8C /* CominiView.swift */,
 				BA9633E11F3B404900A0FC8C /* CominiView.xib */,
 				BA9633E31F3B6AA500A0FC8C /* Area1Traffic.swift */,
@@ -205,7 +202,6 @@
 				BA9633DE1F3B3FFB00A0FC8C /* CominiView.swift in Sources */,
 				BA1428701F33591400BBE6F9 /* FirstViewController.swift in Sources */,
 				BA6360681F33792300F7FE61 /* FifthViewController.swift in Sources */,
-				BA8CD76A1F39AC7200CEE031 /* YNTabBarItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -78,7 +78,7 @@ class FifthViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super .viewDidAppear(animated)
-        netWorkStatusTimer = Timer.scheduledTimer(timeInterval: 8 , target: self, selector: #selector(self.netWork), userInfo: nil, repeats: true)
+        netWorkStatusTimer = Timer.scheduledTimer(timeInterval: 8.1 , target: self, selector: #selector(self.netWork), userInfo: nil, repeats: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -95,7 +95,7 @@ class FifthViewController: UIViewController {
             print("網路通的")
             let urlString = self.theServer + "mobile/in"
             let url = URL(string: urlString)
-            let urlRequest = URLRequest(url: url!, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 7.9)
+            let urlRequest = URLRequest(url: url!, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 8.0)
             let session = URLSession.shared
             session.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
                 

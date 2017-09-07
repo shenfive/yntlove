@@ -42,6 +42,7 @@
 		BA6360631F3378E500F7FE61 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		BA6360651F33791400F7FE61 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		BA6360671F33792300F7FE61 /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
+		BA7CBE1A1F55B503008410AF /* yntlove.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = yntlove.entitlements; sourceTree = "<group>"; };
 		BA9633DD1F3B3FFB00A0FC8C /* CominiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CominiView.swift; sourceTree = "<group>"; };
 		BA9633E11F3B404900A0FC8C /* CominiView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CominiView.xib; sourceTree = "<group>"; };
 		BA9633E31F3B6AA500A0FC8C /* Area1Traffic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Area1Traffic.swift; sourceTree = "<group>"; };
@@ -83,6 +84,7 @@
 		BA14286C1F33591400BBE6F9 /* yntlove */ = {
 			isa = PBXGroup;
 			children = (
+				BA7CBE1A1F55B503008410AF /* yntlove.entitlements */,
 				BA14286D1F33591400BBE6F9 /* AppDelegate.swift */,
 				BA14286F1F33591400BBE6F9 /* FirstViewController.swift */,
 				BA1428711F33591400BBE6F9 /* SecondViewController.swift */,
@@ -149,6 +151,11 @@
 						DevelopmentTeam = AG853EA2M5;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -337,12 +344,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = yntlove/yntlove.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = AG853EA2M5;
 				INFOPLIST_FILE = yntlove/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.3n6.yntlove;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "yntlove-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -355,12 +365,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = yntlove/yntlove.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = AG853EA2M5;
 				INFOPLIST_FILE = yntlove/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.3n6.yntlove;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "yntlove-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

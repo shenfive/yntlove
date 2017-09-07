@@ -15,11 +15,12 @@ class FifthViewController: UIViewController {
 
   
     @IBOutlet weak var divLine: UIView!
+    @IBOutlet weak var topLogo: UIImageView!
     
     var netWorkStatusTimer = Timer()
-    var testCount = 0
+    var testCount = 30
     let mainThread = Thread.main
-    let webView = WKWebView()
+    let webView = UIWebView()
     let button = UIButton()
     let theServer = "https://5f.yntlove.com/"
     
@@ -47,13 +48,13 @@ class FifthViewController: UIViewController {
         // Do any additional setup after loading the view.
         pictures.isHidden = true
         let rect = CGRect(x: self.view.frame.origin.x,
-                          y: self.view.frame.origin.y + 20,
+                          y: self.view.frame.origin.y + 40,
                           width: self.view.frame.width,
-                          height: self.view.frame.height - 33)
+                          height: self.view.frame.height - 53)
         webView.frame = rect
         webView.isHidden = true
-        button.frame = CGRect(x: 0, y: 20, width: 66, height: 33)
-        button.setImage(UIImage(named:"icon_back"), for: .normal)
+        button.frame = CGRect(x: 0, y: 20, width: 90, height: 20)
+        button.setImage(UIImage(named:"icon_back_ph"), for: .normal)
         button.setTitle("", for: .normal)
         button.isHidden = true
         button.addTarget(self, action: #selector(self.hindWeb), for: .touchUpInside)
@@ -67,6 +68,7 @@ class FifthViewController: UIViewController {
     func hindWeb(){
         self.button.isHidden = true
         self.webView.isHidden = true
+        self.topLogo.isHidden = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -78,7 +80,7 @@ class FifthViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super .viewDidAppear(animated)
-        netWorkStatusTimer = Timer.scheduledTimer(timeInterval: 8.1 , target: self, selector: #selector(self.netWork), userInfo: nil, repeats: true)
+        netWorkStatusTimer = Timer.scheduledTimer(timeInterval: 1 , target: self, selector: #selector(self.netWork), userInfo: nil, repeats: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -95,7 +97,7 @@ class FifthViewController: UIViewController {
             print("網路通的")
             let urlString = self.theServer + "mobile/in"
             let url = URL(string: urlString)
-            let urlRequest = URLRequest(url: url!, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 8.0)
+            let urlRequest = URLRequest(url: url!, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 30.0)
             let session = URLSession.shared
             session.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
                 
@@ -104,11 +106,11 @@ class FifthViewController: UIViewController {
 
                         if let contentString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue) as String?{
                             if contentString == "in"{
-                                
+                                self.testCount = 0
 //                                self.pictures.isHidden = false
                                 DispatchQueue.main.async {
                                     self.pictures.isHidden = false
-                                    
+                    
                                 }
 
                             }else{self.hindPicture()}
@@ -122,19 +124,33 @@ class FifthViewController: UIViewController {
     @IBAction func openPictureWeb(_ sender: UIButton) {
         webView.isHidden = false
         button.isHidden = false
+        self.topLogo.isHidden = true
         if webView.isLoading == false{
             let urlRequest = URLRequest(url: URL(string:theServer + "MUser/login")!)
-            webView.load(urlRequest)
+            webView.loadRequest(urlRequest)
         }
     }
     
     
     func hindPicture(){
+        print(testCount)
+        if testCount > 30 {
+            realhindPicture()
+        }else{
+            testCount += 1
+        }
+    }
+    func realhindPicture(){
+        print ("%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
         DispatchQueue.main.async {
             self.pictures.isHidden = true
             self.webView.isHidden = true
+            self.button.isHidden = true
+            self.topLogo.isHidden = false
         }
     }
+    
+    
     @IBAction func p01(_ sender: Any) {
         targetPictures = picturesA
         picturesSubTitle = "永念庭"
@@ -150,7 +166,7 @@ class FifthViewController: UIViewController {
 
     @IBAction func p03(_ sender: Any) {
         targetPictures = picturesC
-        picturesSubTitle = "永念亭拜飯"
+        picturesSubTitle = "永念庭拜飯"
         performSegue(withIdentifier: "goPic", sender: self)
     }
     
